@@ -17,4 +17,4 @@
 # doc/**/*.pdf
 
 *.pyc
-# __pycache__/
+__pycache__/
