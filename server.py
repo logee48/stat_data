@@ -83,4 +83,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"ram_data":ram_data_in_json,"battery_data":battery_data_in_json,"swap_memory_data":swap_data_in_json}
+    return {"ram_data":ram_data_in_json,"battery_data":battery_data_in_json,"swap_memory_data":swap_data_in_json,"data_new":psutil.virtual_memory()}
