@@ -6,3 +6,6 @@
 -> storage data {total, used, available}
 -> CPU {%used, load_Data}
 -> fan {speed}
+
+
+need to find a way to update data every 1sec
