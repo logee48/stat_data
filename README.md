@@ -9,3 +9,9 @@
 
 
 need to find a way to update data every 1sec
+
+done:
+RAM - {virtual, swap}
+Battery
+Disk storage
+cpu load
