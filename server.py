@@ -2,6 +2,24 @@ import os
 import psutil
 from fastapi import FastAPI
 from hurry.filesize import size
+import firebase_admin
+from firebase_admin import db
+import json
+
+cred_object = firebase_admin.credentials.Certificate('key.json')
+firebase_admin.initialize_app(cred_object, {
+	'databaseURL':'https://pythonconn-2578e-default-rtdb.asia-southeast1.firebasedatabase.app/'
+	})
+
+ref = db.reference("/")
+# with open("sample.json", "r") as f:
+# 	file_contents = json.load(f)
+# ref.set(file_contents)
+# b = "sam"
+# a = {"a":"jh", "c":"works"}
+# ref.set(json.dumps(a))
+
+
 
 processor_count = psutil.cpu_count()
 
@@ -87,10 +105,12 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {
+    a = {
         "ram_data": get_ram_data(psutil.virtual_memory()),
         "disk_data": get_disk_data(psutil.disk_usage("/")),
         "battery_data": get_battery_data(psutil.sensors_battery()),
         "swap_data": get_swap_data(psutil.swap_memory()),
         "load_data": get_cpu_load(os.getloadavg())
     }
+
+    ref.set(json.dumps(a))
