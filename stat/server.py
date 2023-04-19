@@ -11,7 +11,7 @@ firebase_admin.initialize_app(cred_object, {
 	'databaseURL':'https://pythonconn-2578e-default-rtdb.asia-southeast1.firebasedatabase.app/'
 	})
 
-ref = db.reference("/")
+ref = db.reference("/data")
 # with open("sample.json", "r") as f:
 # 	file_contents = json.load(f)
 # ref.set(file_contents)
@@ -113,4 +113,4 @@ async def root():
         "load_data": get_cpu_load(os.getloadavg())
     }
 
-    ref.set(json.dumps(a))
+    ref.set(a)
