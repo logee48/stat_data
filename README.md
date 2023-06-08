@@ -1,3 +1,9 @@
+
+my progress
+
+<img src="./ss.png"></img>
+
+
 #new one
 
 -> battery data {%, timeleft, charging or not}

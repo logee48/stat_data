@@ -1,0 +1,129 @@
+[
+  {
+    "images": "https://i.ebayimg.com/images/g/W58AAOSw3VRkCCZg/s-l1600.jpg",
+    "platform": "playstation",
+    "price": 1560,
+    "product_id": 0,
+    "product_name": "Hogwards legacy",
+    "status": "not sold",
+    "type": "game"
+  },
+  {
+    "images": "https://m.media-amazon.com/images/I/51JoSGbJvdL.jpg",
+    "platform": "book",
+    "price": 320,
+    "product_id": 1,
+    "product_name": "The Sound of Waves",
+    "status": "sold",
+    "type": "book"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/x8kAAOSwHrxkDTNr/s-l1600.jpg",
+    "platform": "xbox",
+    "price": 1100,
+    "product_id": 2,
+    "product_name": "grand theft auto V",
+    "status": "sold",
+    "type": "game"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/wXcAAOSwSvBj4-Dz/s-l1600.jpg",
+    "platform": "playstation",
+    "price": 1400,
+    "product_id": 3,
+    "product_name": "god of war ragnarok",
+    "status": "not sold",
+    "type": "game"
+  },
+  {
+    "images": "https://m.media-amazon.com/images/I/71HP19ocH0L._AC_UY436_QL65_.jpg",
+    "platform": "book",
+    "price": 1345,
+    "product_id": 4,
+    "product_name": "the book of 5 rings",
+    "status": "sold",
+    "type": "game"
+  },
+  {
+    "images": "https://m.media-amazon.com/images/I/517eqjeVDzL._SX322_BO1,204,203,200_.jpg",
+    "platform": "book",
+    "price": 350,
+    "product_id": 5,
+    "product_name": "The Stranger",
+    "status": "sold",
+    "type": "book"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/eLwAAOSwL1xkUCSj/s-l500.jpg",
+    "platform": "xbox",
+    "price": 1100,
+    "product_id": 6,
+    "product_name": "Call of dutymodern warfare 2",
+    "status": "not sold",
+    "type": "book"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/094AAOSwQatj8Naz/s-l1600.jpg",
+    "platform": "playstation",
+    "price": 2700,
+    "product_id": 7,
+    "product_name": "Red Dead Redemption 2",
+    "status": "not sold",
+    "type": "book"
+  },
+  null,
+  {
+    "images": "https://i.ebayimg.com/images/g/SLoAAOSwDeRePBHQ/s-l500.jpg",
+    "platform": "xbox",
+    "price": "3800",
+    "product_id": 9,
+    "product_name": "Super Smash Bros Ultimate",
+    "status": "sold",
+    "type": "game"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/ktcAAOSwaxpkTT7w/s-l500.jpg",
+    "platform": "pc",
+    "price": "890",
+    "product_id": 10,
+    "product_name": "Half Life",
+    "status": "not sold",
+    "type": "game"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/otAAAOSwe35hJoC7/s-l500.jpg",
+    "platform": "playstation",
+    "price": "780",
+    "product_id": 11,
+    "product_name": "Far Cry 3",
+    "status": "not sold",
+    "type": "game"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/kr4AAOSwSAFkSABO/s-l500.jpg",
+    "platform": "xbox",
+    "price": "1190",
+    "product_id": 12,
+    "product_name": "Far Cry 6",
+    "status": "not sold",
+    "type": "game"
+  },
+  {
+    "images": "https://m.media-amazon.com/images/I/91mHbLmJKgL._AC_UY436_QL65_.jpg",
+    "platform": "book",
+    "price": "8500",
+    "product_id": 13,
+    "product_name": "Sailing Alone Around the World",
+    "status": "not sold",
+    "type": "book"
+  },
+  {
+    "images": "https://i.ebayimg.com/images/g/RdkAAOSw5gtkR90F/s-l500.jpg",
+    "platform": "playstation",
+    "price": "1050",
+    "product_id": 14,
+    "product_name": "Uncharted 2 Among Thieves PS3",
+    "status": "not sold",
+    "type": "game"
+  }
+]

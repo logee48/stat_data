@@ -5,6 +5,7 @@ from hurry.filesize import size
 import firebase_admin
 from firebase_admin import db
 import json
+import time
 
 cred_object = firebase_admin.credentials.Certificate('key.json')
 firebase_admin.initialize_app(cred_object, {
@@ -12,6 +13,7 @@ firebase_admin.initialize_app(cred_object, {
 	})
 
 ref = db.reference("/data")
+ramref = db.reference("/sysdata/ram")
 # with open("sample.json", "r") as f:
 # 	file_contents = json.load(f)
 # ref.set(file_contents)
@@ -96,21 +98,38 @@ def get_cpu_load(cpul):
     l5 = (load5/cpuu)*100
     l15 = (load15/cpuu)*100
     return {"loadover_1min":l1,"loadover_5min":l5,"loadover_15min":l15}
-print(get_cpu_load(os.getloadavg()))
+# print(get_cpu_load(os.getloadavg()))
 
 
 
 
 app = FastAPI()
-
-@app.get("/")
+rref = db.reference("/sysdata/counter/")
+print(rref.get()["counter"])
+# print(json.parse(rref.get()))
+@app.get("/api/v1/")
 async def root():
-    a = {
+    # a = {
+    #     "ram_data": get_ram_data(psutil.virtual_memory()),
+    #     "disk_data": get_disk_data(psutil.disk_usage("/")),
+    #     "battery_data": get_battery_data(psutil.sensors_battery()),
+    #     "swap_data": get_swap_data(psutil.swap_memory()),
+    #     "load_data": get_cpu_load(os.getloadavg())
+    # }
+
+    # ref.set(a)
+    # ramref.set(a)
+
+    db.reference("/sysdata/ram/"+str(rref.get()["counter"])).set(get_ram_data(psutil.virtual_memory()))
+    db.reference("/sysdata/disk/"+str(rref.get()["counter"])).set(get_disk_data(psutil.disk_usage("/")))
+    db.reference("/sysdata/battery/"+str(rref.get()["counter"])).set(get_battery_data(psutil.sensors_battery()))
+    db.reference("/sysdata/swap/"+str(rref.get()["counter"])).set(get_swap_data(psutil.swap_memory()))
+    db.reference("/sysdata/load/"+str(rref.get()["counter"])).set(get_cpu_load(os.getloadavg()))
+    db.reference("/sysdata/counter").set({"counter":rref.get()["counter"]+1})
+    return({
         "ram_data": get_ram_data(psutil.virtual_memory()),
         "disk_data": get_disk_data(psutil.disk_usage("/")),
         "battery_data": get_battery_data(psutil.sensors_battery()),
         "swap_data": get_swap_data(psutil.swap_memory()),
         "load_data": get_cpu_load(os.getloadavg())
-    }
-
-    ref.set(a)
+    })

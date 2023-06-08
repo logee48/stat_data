@@ -1,0 +1,23 @@
+{
+    "0": {
+      "pv": 6685261824,
+      "uv": 6991233024,
+      "percent_of_ram_used": 59.3,
+      "total_memory": 17179869184,
+      "wired_memory": 1860042752
+    },
+    "1": {
+      "pv": 6687604736,
+      "uv": 6984171520,
+      "percent_of_ram_used": 59.3,
+      "total_memory": 17179869184,
+      "wired_memory": 1866104832
+    },
+    "3": {
+      "pv": 6660653056,
+      "uv": 6959792128,
+      "percent_of_ram_used": 59.5,
+      "total_memory": 17179869184,
+      "wired_memory": 1917714432
+    }
+  }
